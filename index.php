@@ -7,8 +7,7 @@
 <html>
     <head>
 	    <meta charset="utf-8">
-        <link rel="stylesheet" href="csss/style.css">  
-        
+        <link rel="stylesheet" href="csss/style.css">
         <meta name="keywords" content="рации Baofeng">
         <meta name="description" content="">
         <meta name="author" land="ru" content="Солоп Николай">
@@ -98,6 +97,6 @@
         <script src="js/shop-script.js"></script>
         <script src="js/jquery.cookie.min.js"></script>
         <script src="js/pass.js"></script>
-        <script src="js/pass.js"></script>
+
 	  </body>
 </html>

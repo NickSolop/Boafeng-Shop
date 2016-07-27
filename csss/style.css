@@ -48,6 +48,19 @@
     background-image: url(/images/fon.png);
     background-size: 100%;
 }
+.enter-start{
+	position: relative;
+	width: auto;
+    height: 40px;
+	text-align: left;
+	color: #bfbfbf;
+	font-size: 17px;;
+	font-family: "Didact Gothic" ,sans-serif ;
+}
+.enter-start p {
+	padding: 10px;
+	padding-left: 20px;
+}
 #submitenter {
     width: 16%;
     height: 56%;
@@ -61,6 +74,7 @@
     text-align: center;
     margin-left: 34%;
     margin-top: 0.9%;
+	float:left;
 }
 #submitenter:hover {
     color: #FFBA00;
@@ -230,6 +244,9 @@ display: none;
     margin-left: 810px;
     margin-top: -220px;
 }
+#icon-footer a{
+	text-decoration: none;
+}
 #icon-footer h3 {
      margin-right: 20px;
 }
@@ -256,17 +273,17 @@ display: none;
     font-family: "Comfortaa" ,sans-serif ;
     color: rgba(0, 19, 253, 0.9);
     text-decoration: none;
-	
 }
 .style-title a:hover{
     color: rgb(255, 157, 23);
     cursor: pointer;
 }
+.button {
+	 text-decoration: none;
+}
 .block-images{
     margin-left: 10px;
     margin-top: 10px;
-	 
-	
 }
 .price{
     font-family: "Exo 2" , sans-serif ;
@@ -391,6 +408,7 @@ display: none;
     -moz-box-shadow: 0 0 15px #DBDBDB;
     -webkit-box-shadow: 0 0 15px #DBDBDB;
     box-shadow: 0 0 15px #DBDBDB;
+
 }
 #message-auth {
     display: none;
@@ -504,6 +522,8 @@ display: none;
     position: absolute;
     z-index: 9999;
     box-shadow: 0 0 15px #DBDBDB;
+	font-family: "Noto Sans", sans-serif;
+
 }
 #block-remind h3 {
     text-align: center;
@@ -544,9 +564,6 @@ h1 {
      border-right: 1px solid #C9C9C9;
     display: block;
     height: auto;
-}
-a {
-	text-decoration: none;
 }
 .footer-pagesale{
    font-family: "Rubik" , sans-serif;
@@ -633,4 +650,12 @@ a {
 .idmaps {
     width: 100%;
     height: 400px; 
+}
+.button-remind {
+	width: 50%;
+	height: 40px;
+	margin-left: 25%;
+	margin-top: 15px;
+	margin-bottom: 15px;
+
 }

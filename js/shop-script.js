@@ -4,16 +4,28 @@ $(document).ready(function () {
     });
 
 
-    $('#submitenter').toggle(
-        function () {
-            $("#submitenter").attr("id", "");
-            $("#block-top-auth").fadeIn(200);
-        },
-        function () {
-            $("#submitenter").attr("id", "");
-            $("#block-top-auth").fadeOut(200);
-        }
-    );
+
+      $("#submitenter").toggle(function() {
+
+        $("#block-top-auth").fadeIn();
+        return false;
+      },
+      function() {
+        $("#block-top-auth").fadeOut();
+        return false;
+      });
+
+
+
+
+	$('.maps').click(function () {
+					$('.maps iframe').css("pointer-events", "auto");
+				});
+
+				$( ".maps" ).mouseleave(function() {
+				  $('.maps iframe').css("pointer-events", "none");
+				});
+
 
 
     $("#button-auth").click(function () {
@@ -42,7 +54,7 @@ $(document).ready(function () {
         }
 
 
-        if ($("#rememberme").prop('checked')) {
+        if ($("#rememberme").attr('checked')) {
             auth_rememberme = 'yes';
         }
         else {
@@ -65,7 +77,7 @@ $(document).ready(function () {
                         location.reload();
                     }
                     else {
-                        $("#message-auth").slideDown(400);
+                        $("#message-auth").slideDown(300);
                         $(".auth-loading").hide();
                         $("#button-auth").show();
 
@@ -77,7 +89,9 @@ $(document).ready(function () {
     });
 
 
-    $('#remindpass').click(function () {
+
+
+$('#remindpass').click(function () {
 
         $('#input-email-pass').fadeOut(200, function () {
             $('#block-remind').fadeIn(300);
