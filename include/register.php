@@ -1,8 +1,11 @@
 <?php
             include("include/db_connect.php");
+
             session_start();
 ?>
 
+       <script type="javascript" src="/js/pass.js"></script>
+       <script type="javascript" src="/js/shop-script.js"></script>
          <div class="regist">
           <?php
 
@@ -19,36 +22,13 @@ if ($_SESSION['auth'] == 'yes_auth')
 }	
 ?>
       </div>
-       <script type="javascript" src="/js/pass.js"></script>
-       <script type="javascript" src="/js/shop-script.js"></script>
-       <script type="javascript" src="/js/bootstrap.js"></script>
-
-
-<!--<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-        <h4 class="modal-title" id="myModalLabel">Название модали</h4>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
-        
-      </div>
-    </div>
-  </div>
-</div>
-        -->
 
 
          <div id="block-top-auth">
         <form method="POST">
             <ul id="input-email-pass">
                <h3>Вход</h3>
-              <p id="message-auth">Неверный Логин и(или) Пароль</p>
+               <div class="message-auth">Неверный Логин и(или) Пароль</div>
                 <li><input type="text" id="auth_login" placeholder="Login или e-mail"></li>
                 <li><input type="password" id="auth_pass" placeholder="Пароль"></li>
                 <ul id="list-auth">
@@ -56,7 +36,6 @@ if ($_SESSION['auth'] == 'yes_auth')
                 <li><a id="remindpass" href="#block-remind">Забыли пароль?</a></li>
                 </ul>
                 <input type="submit" id="button-auth" value="Вход">
-           <!--  <p class="auth-loading"><img src="/images/loading.gif"/></p>-->
             </ul>
             
         </form>
@@ -64,7 +43,7 @@ if ($_SESSION['auth'] == 'yes_auth')
     
     <div id="block-remind">
 <h3>Восстановление<br /> пароля</h3>
-<p id="message-remind" class="message-remind-success">Введите ваш E-mail</p>
+<p id="message-remind" class="message-remind-success"></p>
 <input type="text" id="remind-email" placeholder="Введите ваш E-mail" />
 <button type="button" class="button-remind">Готово</button>
 <p align="right" class="auth-loading" ><img src="/images/loading.gif"/></p>

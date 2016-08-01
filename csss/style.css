@@ -408,9 +408,8 @@ display: none;
     -moz-box-shadow: 0 0 15px #DBDBDB;
     -webkit-box-shadow: 0 0 15px #DBDBDB;
     box-shadow: 0 0 15px #DBDBDB;
-
 }
-#message-auth {
+.message-auth {
     display: none;
     width: 190px;
     font-family: "Noto Sans", sans-serif;

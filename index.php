@@ -2,6 +2,7 @@
    define('myeshop', true);
    include("include/db_connect.php");
    session_start();
+
 ?>
 
 <html>

@@ -7,11 +7,11 @@ $(document).ready(function () {
 
       $("#submitenter").toggle(function() {
 
-        $("#block-top-auth").fadeIn();
+        $("#block-top-auth").fadeIn(200);
         return false;
       },
       function() {
-        $("#block-top-auth").fadeOut();
+        $("#block-top-auth").fadeOut(200);
         return false;
       });
 
@@ -19,11 +19,11 @@ $(document).ready(function () {
 
 
 	$('.maps').click(function () {
-					$('.maps iframe').css("pointer-events", "auto");
+			    $('.maps iframe').css("pointer-events", "auto");
 				});
 
 				$( ".maps" ).mouseleave(function() {
-				  $('.maps iframe').css("pointer-events", "none");
+				$('.maps iframe').css("pointer-events", "none");
 				});
 
 
@@ -35,7 +35,7 @@ $(document).ready(function () {
 
 
         if (auth_login == "" || auth_login.length > 30) {
-            $("#auth_login").css("borderColor", "#FDB6B6");
+            $("#auth_login").css("borderColor", "#ff0000");
             send_login = 'no';
         } else {
 
@@ -45,7 +45,7 @@ $(document).ready(function () {
 
 
         if (auth_pass == "" || auth_pass.length > 15) {
-            $("#auth_pass").css("borderColor", "#FDB6B6");
+            $("#auth_pass").css("borderColor", "#ff0000");
             send_pass = 'no';
         }
         else {
@@ -62,8 +62,7 @@ $(document).ready(function () {
         }
 
         if (send_login == 'yes' && send_pass == 'yes') {
-            $("#button-auth").hide();
-            $(".auth-loading").show();
+
 
             $.ajax({
                 type: "POST",
@@ -73,17 +72,15 @@ $(document).ready(function () {
                 cache: false,
                 success: function (data) {
 
-                    if (data == 'yes_auth') {
-                        location.reload();
-                    }
-                    else {
-                        $("#message-auth").slideDown(300);
-                        $(".auth-loading").hide();
-                        $("#button-auth").show();
-
-                    }
+                   if (data == 'yes_auth')
+                          {
+                     location.reload();
+                    }else
+                  {
+                     $("#message-auth").slideDown(400);
 
                 }
+               }
             });
         }
     });
